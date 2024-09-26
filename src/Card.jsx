@@ -1,13 +1,13 @@
 import React from "react";
 import { Card, CardMedia, CardContent, Typography, Chip } from "@mui/material";
-import styles from "./Card.module.css"; // Create this CSS file for additional styles
+import styles from "./Card.module.css"; // CSS for additional styles
 
-function AlbumCard({ album }) {
+function AlbumCard({ album, isSongSection }) {
   return (
     <Card className={styles.card}>
       <CardMedia
         component="img"
-        image={album.image || "https://via.placeholder.com/150"} // Use a placeholder image if none is provided
+        image={album.image || "https://via.placeholder.com/150"} // Placeholder image if none is provided
         alt={album.title}
         className={styles.media}
       />
@@ -15,10 +15,16 @@ function AlbumCard({ album }) {
         <Typography variant="h6" component="div" className={styles.title}>
           {album.title}
         </Typography>
-        <Chip label={`${album.followCount} follows`} className={styles.chip} />
+        <Chip
+          label={isSongSection ? `${album.likes} likes` : `${album.followCount} follows`}
+          className={styles.chip}
+        />
       </CardContent>
     </Card>
   );
 }
 
 export default AlbumCard;
+
+
+

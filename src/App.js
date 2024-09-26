@@ -1,39 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import Section from './Section';
+import React from "react";
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import Section from "./Section"; // Import Section for Top Albums
+import styles from "./App.css"; // Your app styles
 
 function App() {
-  const [topAlbums, setTopAlbums] = useState([]);
-  const [newAlbums, setNewAlbums] = useState([]);
-
-  useEffect(() => {
-    const fetchAlbums = async () => {
-      try {
-        const topResponse = await fetch("https://qtify-backend-labs.crio.do/albums/top");
-        const topData = await topResponse.json();
-        console.log("Top Albums:", topData); // Log the data
-        setTopAlbums(topData);
-
-        const newResponse = await fetch("https://qtify-backend-labs.crio.do/albums/new");
-        const newData = await newResponse.json();
-        console.log("New Albums:", newData); // Log the data
-        setNewAlbums(newData);
-      } catch (error) {
-        console.error("Error fetching albums:", error);
-      }
-    };
-
-    fetchAlbums();
-  }, []);
-
   return (
-    <div>
-      <Section albums={topAlbums} title="Top Albums" />
-      <Section albums={newAlbums} title="New Albums" />
+    <div className={styles.appContainer}>
+      <Navbar />
+      <Hero />
+      <Section title="Top Albums" /> {/* Render Section for Top Albums */}
     </div>
   );
 }
 
 export default App;
+
 
 
 

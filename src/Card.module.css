@@ -1,18 +1,35 @@
 .card {
-    max-width: 345px; /* Adjust as needed */
-    margin: 16px; /* Spacing around cards */
-  }
-  
-  .media {
-    height: 140px; /* Adjust to control image height */
-    object-fit: cover; /* Prevents overflow */
-  }
-  
-  .title {
-    margin-bottom: 8px; /* Space between title and chip */
-  }
-  
-  .chip {
-    margin-top: 8px; /* Space above chip */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  height: 300px; /* Adjust based on design requirements */
+  width: 200px; /* Adjust width as needed */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Prevent overflow of image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+.media {
+  height: 60%; /* Space taken by image */
+  width: 100%; /* Ensure image takes full width of card */
+  object-fit: cover; /* Cover ensures image fills space without distortion */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between title and chip */
+  padding: 16px; /* Padding inside the card */
+  height: 40%; /* Space taken by bottom section */
+}
+
+.title {
+  font-weight: bold; /* Make the album title bold */
+  margin-bottom: 8px; /* Space between title and chip */
+}
+
+.chip {
+  align-self: flex-start; /* Align chip to start */
+  padding: 4px 8px; /* Padding inside chip */
+  background-color: #f50057; /* Chip background color */
+  color: white; /* Chip text color */
+}
