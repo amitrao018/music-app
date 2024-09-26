@@ -1,0 +1,9 @@
+.header {
+  display: flex;
+  justify-content: space-between; /* Align items to the sides */
+  align-items: center; /* Center items vertically */
+}
+
+.toggleButton {
+  margin-left: auto; /* Push the button to the right */
+}

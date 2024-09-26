@@ -1,0 +1,16 @@
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .swiper {
+    width: 100%;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center; /* Center cards */
+    align-items: center; /* Center cards */
+  }
+  
