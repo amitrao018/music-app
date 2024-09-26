@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styles from "./Hero.module.css"; // Ensure this path is correct
+import headphoneImage from "./assets/hero_headphones.png"; // Ensure the filename and path are correct
 
-function App() {
+function Hero() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.hero}>
+      <div>
+        <h1>100 Thousand Songs, ad-free</h1>
+        <h1>Over thousands podcast episodes</h1>
+      </div>
+      <div>
+        <img
+          src={headphoneImage}
+          width={212}
+          alt="headphones"
+        />
+      </div>
     </div>
   );
 }
 
-export default App;
+export default Hero;
