@@ -1,0 +1,20 @@
+:root {
+  --color-green: #32CD32; /* Replace with the correct green from your Figma file */
+  --color-hover: #1e1e1e; /* Define hover color or adjust */
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--color-green);
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--color-hover);
+}

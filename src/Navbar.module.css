@@ -1,0 +1,23 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:  #04aa6d; /* Adjust based on your theme */
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    width: 100px; /* Adjust based on your design */
+    height: auto;
+  }
+  
+  .searchBar {
+    width: 300px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .searchBar:focus {
+    border-color: var(--color-green); /* Matching the green from Button component */
+  }

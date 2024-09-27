@@ -1,0 +1,10 @@
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+}
